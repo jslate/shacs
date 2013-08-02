@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"
+
+    = csrf_meta_tags
+    = stylesheet_link_tag "application"
+    = javascript_include_tag "application"
+
+  body
+
+    - flash.each do |name, msg|
+      div class="#{name}" = msg
+
+    = yield

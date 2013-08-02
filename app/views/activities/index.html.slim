@@ -1,0 +1,5 @@
+= link_to 'New Activity', new_activity_path
+
+ul
+- @activities.each do |activity|
+  li #{activity.name}

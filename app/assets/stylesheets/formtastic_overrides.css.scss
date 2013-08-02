@@ -1,0 +1,7 @@
+@import 'bourbon';
+
+.formtastic {
+  .link_action a, .input_action input {
+    @include button;
+  }
+}
