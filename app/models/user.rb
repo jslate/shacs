@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
 
-  validates_presense_of :name
+  validates :name, presence: true
 
 end
