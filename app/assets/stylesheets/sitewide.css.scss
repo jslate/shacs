@@ -1,0 +1,39 @@
+$visual-grid: true;
+
+div.container {
+  @include outer-container;
+  @include linear-gradient(#ffffdd, #ffffaa);
+  padding: 20px;
+}
+
+body {
+  font-family: 'Helvetica', sans-serif;
+}
+
+.flash-container {
+  @include span-columns(12);
+  .notice {
+    @include span-columns(6);
+    background-color: #4F991E;
+    color: #fff;
+    border-radius: 3px;
+    margin: 0 0 20px 0;
+    padding: 10px;
+  }
+}
+
+.controls {
+  margin: 20px 0;
+  .button {
+    @include button;
+  }
+}
+
+form {
+  @include span-columns(8);
+}
+
+h1 {
+  margin: 0 0 20px 0;
+  font-size: 1.7em;
+}

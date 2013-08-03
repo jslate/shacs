@@ -10,7 +10,10 @@ html
 
   body
 
-    - flash.each do |name, msg|
-      div class="#{name}" = msg
+    .container
 
-    = yield
+      .flash-container
+        - flash.each do |name, msg|
+          div class="#{name}" = msg
+
+      = yield

@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'slim'
 gem 'formtastic'
 gem 'bourbon'
+gem 'neat'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'

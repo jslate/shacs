@@ -9,7 +9,7 @@ class ActivitiesController < ApplicationController
 
   def create
     Activity.create(activity_params)
-    redirect_to activities_path, notice: 'Created'
+    redirect_to activities_path, notice: 'Activity created'
   end
 
   private
