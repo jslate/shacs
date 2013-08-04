@@ -6,6 +6,8 @@ This is a demo app of an activity coordination system. It allows you to create a
 
 You can see the demo running live here: http://shacs.herokuapp.com/
 
+You will need to sign in with Twitter to use it. Don't worry I'm not messing with your Twitter account. Feel free to mess with the data in the application, that's what it is for!
+
 # gems
 
 Some of the interesting gems I am using:
