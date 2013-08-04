@@ -15,4 +15,13 @@ describe User do
     user.is_following?(activity).should be_true
   end
 
+  it "destroys associated events when destroyed" do
+    user = FactoryGirl.create(:user)
+    activity = FactoryGirl.create(:activity)
+    event = FactoryGirl.create(:event, user: user, activity: activity)
+    Event.count.should eq(1)
+    user.destroy
+    Event.count.should eq(0)
+  end
+
 end
