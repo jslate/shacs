@@ -23,5 +23,5 @@ en:
   hello: "Hello world"
   time:
     formats:
-      slashes: "%m/%e/%Y"
-      kinda_short: "%A, %B %e, %Y at %l:%M%p"
+      slashes: "%m/%-d/%Y"
+      kinda_short: "%A, %B %-d, %Y at %l:%M%p"

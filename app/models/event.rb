@@ -13,7 +13,7 @@ class Event < ActiveRecord::Base
 
   def start_hour
     return unless start_time.present?
-    start_time.hour < 11 ? start_time.hour + 1 : start_time.hour - 12
+    start_time.hour < 13 ? start_time.hour.to_s : (start_time.hour - 12).to_s
   end
 
   def start_minute
@@ -22,7 +22,7 @@ class Event < ActiveRecord::Base
 
   def start_am_pm
     return unless start_time.present?
-    start_time.hour < 11 ? 'am' : 'pm'
+    start_time.hour < 12 ? 'am' : 'pm'
   end
 
   def set_initial_time

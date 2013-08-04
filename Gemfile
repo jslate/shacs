@@ -21,4 +21,8 @@ group :development, :test do
   gem 'rspec'
   gem 'rspec-rails'
   gem 'factory_girl'
+  gem 'timecop'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+  gem 'better_errors'
 end
