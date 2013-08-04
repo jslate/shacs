@@ -16,4 +16,18 @@ class User < ActiveRecord::Base
     end
   end
 
+  def follow(activity)
+    return if is_following?(activity)
+    update_attributes following_activities: following_activities + [activity.id]
+  end
+
+  def unfollow(activity)
+    return unless is_following?(activity)
+    update_attributes following_activities: following_activities - [activity.id]
+  end
+
+  def is_following?(activity)
+    following_activities.present? && following_activities.include?(activity.id)
+  end
+
 end

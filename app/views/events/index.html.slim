@@ -1,7 +1,6 @@
 h1 Events
 
-.controls
-  = link_to 'New Event', new_event_path, class: 'button'
+p To see more events, follow more #{link_to 'activities', activities_path}.
 
 table
   tr
@@ -17,3 +16,6 @@ table
       td #{event.location}
       td #{l(event.start_time, format: :kinda_short)}
       td #{event.notes}
+
+.controls
+  = link_to 'New Event', new_event_path, class: 'button'

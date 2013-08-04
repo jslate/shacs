@@ -1,8 +1,19 @@
 h1 Activities
 
+p Follow activities to see upcoming events in your events list.
+
+table
+  tr
+    th Activity
+    th
+  - @activities.each do |activity|
+    tr
+      td #{activity.name}
+      td
+        - if current_user.is_following?(activity)
+          = link_to 'Unfollow', unfollow_activity_path(activity), remote: true, method: :post, :class => 'unfollow-link'
+        - else
+          = link_to 'Follow', follow_activity_path(activity), remote: true, method: :post, :class => 'follow-link'
+
 .controls
   = link_to 'New Activity', new_activity_path, class: 'button'
-
-ul
-- @activities.each do |activity|
-  li #{activity.name}

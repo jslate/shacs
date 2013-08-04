@@ -28,14 +28,16 @@ body {
 
 .flash-container {
   @include span-columns(12);
-  .notice {
+  .notice, .warning {
     @include span-columns(6);
-    background-color: #4F991E;
     color: #fff;
     border-radius: 3px;
     margin: 20px 0;
     padding: 10px;
+    a { color: blue; text-decoration: none; }
   }
+  .notice { background-color: #4F991E; }
+  .warning { background-color: #928704; }
 }
 
 .controls {

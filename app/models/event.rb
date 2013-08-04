@@ -7,6 +7,18 @@ class Event < ActiveRecord::Base
 
   attr_accessor :start_date, :start_hour, :start_minute, :start_am_pm
 
+  def self.for_user(u)
+    if u.following_activities.present?
+      joins(:activity).where(['ARRAY[activities.id] && ARRAY[?]', u.following_activities])
+    else
+      joins(:activity)
+    end
+  end
+
+  def self.current_and_future
+    where('start_time >= ?', 1.hour.ago).order(:start_time)
+  end
+
   def start_date
     start_time.present? ? I18n.l(start_time, format: :slashes) : nil
   end

@@ -1,6 +1,6 @@
 class EventsController < ApplicationController
   def index
-    @events = Event.all
+    @events = Event.for_user(current_user).current_and_future
   end
 
   def new
@@ -12,7 +12,12 @@ class EventsController < ApplicationController
     @event = Event.new(event_params)
     @event.user = current_user
     if @event.save
-      redirect_to events_path, notice: 'Event created'
+      if current_user.is_following?(@event.activity)
+        redirect_to events_path, notice: 'Event created'
+      else
+        flash[:warning] = %Q{Your event was created, but you aren't currently following the activity <strong>#{@event.activity.name}</strong>. Go to the <a href="#{activities_path}">activities</a> page to follow it.}.html_safe
+        redirect_to events_path
+      end
     else
       render 'new'
     end
