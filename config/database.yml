@@ -14,3 +14,11 @@ test:
   username: shacs
   password:
 
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: shacs_production
+  pool: 5
+  username: shacs
+  password:
+
