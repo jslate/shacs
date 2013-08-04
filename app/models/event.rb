@@ -8,11 +8,8 @@ class Event < ActiveRecord::Base
   attr_accessor :start_date, :start_hour, :start_minute, :start_am_pm
 
   def self.for_user(u)
-    if u.following_activities.present?
-      joins(:activity).where(['ARRAY[activities.id] && ARRAY[?]', u.following_activities])
-    else
-      joins(:activity)
-    end
+    return where('1 = 2') unless u.following_activities.present?
+    joins(:activity).where(['ARRAY[activities.id] && ARRAY[?]', u.following_activities])
   end
 
   def self.current_and_future
