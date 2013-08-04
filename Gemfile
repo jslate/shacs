@@ -9,6 +9,7 @@ gem 'bourbon'
 gem 'neat'
 gem 'omniauth-twitter'
 gem 'pg'
+gem 'thin'
 
 group :assets do
   gem 'sass-rails',   '~> 4.0.0.beta1'
