@@ -1,13 +1,12 @@
-shacs
-=====
+# SawyerHill Activity Coordination System
 
-SawyerHill Activity Coordination System
+This is a demo app of an activity coordination system. It allows you to create activities and then create events for those activities, for example, you could have the activity "BBQ" and the associated event would be the BBQ I'm hosting next Thursday.Users can choose to follow specific activities, and they will then see events for that given activity in their events list. The application requires the user to sign in with Twitter.
 
-This is a demo app of an activity coordination system. It allows you to create activities and then create events for those activities, for example, you could have the activity "BBQ" and the associated event would be the BBQ I'm hosting next Thursday.
+## demo
 
-Users can choose to follow specific activities, and they will then see events for that given activity in their events list.
+You can see the demo running live here: http://shacs.herokuapp.com/
 
-The application requires the user to sign in with Twitter.
+# gems
 
 Some of the interesting gems I am using:
 
