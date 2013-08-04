@@ -47,5 +47,8 @@ describe Event do
     end
   end
 
+  it "don't see events for activities I don't follow", js: true do
+    pending
+  end
 
 end
