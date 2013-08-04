@@ -1,8 +1,8 @@
 h1 Activities
 
+.controls
+  = link_to 'New Activity', new_activity_path, class: 'button'
+
 ul
 - @activities.each do |activity|
   li #{activity.name}
-
-.controls
-  = link_to 'New Activity', new_activity_path, class: 'button'

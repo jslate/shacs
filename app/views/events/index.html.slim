@@ -1,0 +1,19 @@
+h1 Events
+
+.controls
+  = link_to 'New Event', new_event_path, class: 'button'
+
+table
+  tr
+    th Activity
+    th Host
+    th Location
+    th Date/time
+    th Notes
+  - @events.each do |event|
+    tr
+      td #{event.activity.name}
+      td #{event.user.name}
+      td #{event.location}
+      td #{l(event.start_time, format: :kinda_short)}
+      td #{event.notes}

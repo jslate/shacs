@@ -1,0 +1,20 @@
+h1 New Event
+
+= semantic_form_for @event, url: events_path do |f|
+  = f.semantic_errors
+  = f.inputs do
+    = f.input :activity_id, as: :select, collection: Activity.all, required: true, include_blank: false
+    = f.input :start_date
+    = f.input :start_hour, label: 'Start time', as: :select, collection: (1..12), wrapper_html: { :class => 'fl' }
+    = f.input :start_minute, as: :select, collection: (0..45).step(15).to_a, :wrapper_html => { :class => 'fl' }
+    = f.input :start_am_pm, as: :select, collection: ['am', 'pm'], :wrapper_html => { :class => 'fl' }
+    li &nbsp;
+    = f.input :start_time, as: :hidden
+    = f.input :location
+    = f.input :notes
+  = f.actions
+    = f.action :submit, label: 'Save'
+    = f.action :cancel, label: 'Cancel'
+
+= javascript_tag "$('#event_start_date').datepicker();"
+

@@ -12,8 +12,19 @@ html
 
     .container
 
-      .flash-container
-        - flash.each do |name, msg|
-          div class="#{name}" = msg
+      .menu
+        .item = link_to_unless_current 'Events', events_path
+        .item = link_to_unless_current 'Activities', activities_path
 
-      = yield
+      .content
+        .login-status
+          - if current_user
+            .logged-in Signed in as #{current_user.name} #{link_to "Sign out", signout_path}
+          - else
+            .not-logged-in = link_to "Sign in with Twitter", "/auth/twitter"
+
+        .flash-container
+          - flash.each do |name, msg|
+            div class="#{name}" = msg
+
+        = yield
