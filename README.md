@@ -12,12 +12,12 @@ You will need to sign in with Twitter to use it. Don't worry I'm not messing wit
 
 Some of the interesting gems I am using:
 
-* slim: because ERB is a pain in the butt
-* formtastic: nice and simple forms
-* bourbon: SCSS wizardry
-* neat: A really cool grid layout system
-* omniauth: For twitter login
-* rspec: for specs, duh
-* factory_girl: create those test objects
-* poltergeist: test with capybara/phantomjs
-* timecop: time travel in your tests!
+* [slim](https://github.com/slim-template/slim): because ERB is a pain in the butt
+* [formtastic](https://github.com/justinfrench/formtastic): nice and simple forms
+* [bourbon](http://bourbon.io): SCSS wizardry
+* [neat](https://github.com/thoughtbot/neat): A really cool grid layout system
+* [omniauth](https://github.com/intridea/omniauth): For twitter login
+* [rspec](http://rspec.info): for specs, duh
+* [factory_girl](https://github.com/thoughtbot/factory_girl): create those test objects
+* [poltergeist](https://github.com/jonleighton/poltergeist): test with capybara/phantomjs
+* [timecop](https://github.com/travisjeffery/timecop): time travel in your tests!
