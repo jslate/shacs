@@ -9,3 +9,4 @@ updateStartTime = ->
 
 $ ->
   $('#event_start_date,#event_start_hour,#event_start_minute,#event_start_am_pm').on 'change', updateStartTime
+  $('form:first *:input[type!=hidden]:first').focus()
